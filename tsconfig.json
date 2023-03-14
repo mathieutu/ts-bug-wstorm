@@ -1,0 +1,27 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "preserveValueImports": false,
+    "paths": {
+      "@/*": [
+        "./resources/js/*"
+      ]
+    },
+  "types": [
+    "@vue-macros/reactivity-transform/macros-global",
+    "vite/client"
+  ],
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
